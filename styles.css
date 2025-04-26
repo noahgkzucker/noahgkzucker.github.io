@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: #f8f8f5; /* Off-white background */
+    font-family: Arial, sans-serif;
+    color: #111; /* Dark gray text */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 1.8em;
+    color: #000; /* Slightly darker for emphasis */
+    text-align: left; /* Left-aligned header */
+    margin-bottom: 10px;
+}
+
+/* Menu Bar Styles */
+.menu-bar {
+    margin-bottom: 20px;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex; /* Arrange items horizontally */
+    gap: 20px; /* Add spacing between menu items */
+    padding: 0;
+  font-family: "freight-text-pro", serif;
+font-weight: 500;
+font-style: normal;
+  font-feature-settings: "smcp"; 
+  text-transform: lowercase;
+  letter-spacing: 10%
+}
+
+.menu-bar ul li {
+    display: inline-block;
+    position: relative; /* Required for ::before positioning */
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #111; /* Same color as body text */
+    font-size: 14px;
+}
+
+.menu-bar ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Position underline at the bottom of text */
+    left: 0;
+    width: 50%; /* Cover only the first 50% of the text */
+    height: 1px; /* Thickness of the underline */
+    background-color: #333; /* Same color as the text */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left; /* Animate from left to right */
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.menu-bar ul li a:hover::before {
+    transform: scaleX(1); /* Expand underline on hover */
+}
+
+/* First menu item ("About") underline visible by default */
+.menu-bar ul li:first-child a::before {
+    transform: scaleX(1); /* Underline visible by default */
+}
+
+/* On hover, retract the underline for the first menu item */
+.menu-bar ul li:first-child a:hover::before {
+    transform: scaleX(0); /* Retract underline on hover */
+    transform-origin: left; /* Retract from right to left */
+}
+
+/* Main Content Styles */
+main {
+    text-align: left;
+}
+
+h1 {
+  font-family: "freight-text-pro", serif;
+font-weight: 600;
+font-style: normal;
+}
+
+p {
+  font-family: "freight-text-pro", serif;
+font-weight: 400;
+font-style: normal;
+}
