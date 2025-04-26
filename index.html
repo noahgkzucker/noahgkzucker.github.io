@@ -1,7 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist Two-Column Layout</title>
+  <link rel="stylesheet" href="https://use.typekit.net/zkk7mri.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "neue-haas-unica", sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .left-column {
+      position: sticky;
+      top: 0;
+      width: 25%;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .right-column {
+      width: 75%;
+      padding: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="container">
+    <div class="left-column">
+      <h2>Sticky Column</h2>
+      <p>This column stays in view as you scroll the right side.</p>
+      <ul>
+        <li>Navigation Item 1</li>
+        <li>Navigation Item 2</li>
+        <li>Navigation Item 3</li>
+        <li>Navigation Item 4</li>
+      </ul>
+    </div>
+    <div class="right-column">
+      <h1>Scrollable Content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, eros vel aliquet posuere, ligula mauris malesuada nulla, at gravida nulla lorem vel turpis. Praesent non eros congue, auctor nibh sit amet, vehicula arcu.</p>
+      <p>Nam eget tincidunt justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Aenean ut risus et odio dapibus molestie.</p>
+      <p>Curabitur dictum condimentum quam, nec porttitor lorem malesuada id. Donec faucibus, nulla vitae vulputate vestibulum, odio felis feugiat velit, ut tempor nulla eros quis sapien. Aliquam erat volutpat.</p>
+      <p>Duis vel lorem ac justo venenatis tristique. Integer malesuada mollis sem non suscipit. Nulla facilisi. Maecenas congue ullamcorper elit, at maximus risus tincidunt eu.</p>
+    </div>
+  </div>
 </body>
 </html>
