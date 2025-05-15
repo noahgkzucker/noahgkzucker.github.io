@@ -119,29 +119,34 @@ p {
 }
 
 .paper-title a {
-  color: #1E40AF;
-    text-decoration: none; 
-    transition: color 0.2s ease; /* Smooth transition for hover effect */
+  color: #222;
+  transition: all 0.3s ease;
+  text-decoration: underline solid 1.5px white;
   border-bottom: none;
 }
 
 .paper-title a:hover {
-  text-decoration: none; 
-  border-bottom: none;
-  color: #2563EB;
+  color: #969696;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px; /* Increase thickness */
+      text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: white;
+      border-bottom: none;
 }
 
 p a {
   text-decoration: none; /* Remove underline for paragraph links */
   color: #222; /* Default link color */
-  border-bottom: 1px solid #d6d6d6; /* Thin gray line underneath */
-  padding-bottom: 2px; /* Stylish padding between text and line */
+  border-bottom: 1.5px solid #d6d6d6;
+  padding-bottom: 0px;
+  line-height: 1;
   transition: border-bottom 0.3s ease; /* Smooth transition for hover effect */
 }
 
 p a:hover {
-  color: currentColor;
-  border-bottom: 1px solid #222; /* Thin gray line underneath */
+  color: #222; /* Change to current color on hover */
+  border-bottom: 1.5px solid #222; /* Thin gray line underneath */
 }
 
 img {
@@ -159,15 +164,66 @@ img {
   vertical-align: -0.2em;
 }
 
+.icon-data {
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: -0.05em;
+}
+
+.icon-data-text {
+  font-weight: 500;
+  font-size: 0.6rem;
+}
+
 a.contact {
   color:#222;
   font-weight:500;
   border-bottom: none; /* Remove underline */
-  transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
 }
 
 a.contact:hover {
-  color: #111; /* Fade to 80% opacity on hover */
+  color: #222; /* Fade to 80% opacity on hover */
+}
+
+.styled-list {
+    font-family: "objektiv-mk3", sans-serif;
+    font-size: 0.75em;
+    color: #777;
+  position: relative;
+  padding-left: 1.25rem; /* space for the bar */
+  list-style: none; /* remove bullets */
+  margin: 0;
+  margin-top: -0.7rem;
+}
+
+.styled-list::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem; /* this indents the bar from the left */
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  background-color: #d6d6d6; /* vertical bar color */
+  border-radius: 0px;
+}
+
+.styled-list li {
+  margin: 0.05rem 0;
+}
+
+.styled-list a {
+  color: currentColor;
+  text-decoration: none;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 0px;
+  line-height: 1;
+  transition: border-bottom 0.3s ease;
+}
+
+.styled-list a:hover {
+  color: currentColor;
+  text-decoration: none;
+    border-bottom: 1px solid #777;
 }
 
 /* Bibliography Section Styles */
@@ -179,25 +235,10 @@ a.contact:hover {
 
 #bibliography h2 {
   font-family: "objektiv-mk3", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500 !important;
+  font-size: 1.05rem;
+  font-weight: 600 !important;
   margin-bottom: 2rem;
   color: #222;
-  text-transform: uppercase; /* Set to all caps */
-  letter-spacing: 0.12em; /* 10% letter spacing */
-  /* Add vertical line */
-  position: relative; /* Required for line positioning */
-  padding-left: 0rem; /* Space between line and text */
-}
-
-#bibliography h2::before {
-  content: ""; /* Creates the vertical line */
-  position: absolute;
-  top: 0;
-  bottom: 0; /* Ensures the line spans the full height of the h2 */
-  left: -15px; /* Moves the line further left into the margin */
-  width: 1.5px; /* Line thickness */
-  background-color: #222; /* Line color */
 }
 
 .solid-line {
@@ -215,11 +256,13 @@ a.contact:hover {
   margin-left: 0rem;
   height: 100%; /* Matches the line height */
   line-height: 1; /* Ensure the button aligns with other text */
-  font-size: 0.6rem; /* Matches the surrounding font size */
+  font-size: 0.625rem; /* Matches the surrounding font size */
+  letter-spacing: 0.05em; /* 5% letter spacing */
+  text-transform: uppercase;
   color: #222;
-  background-color: #F3F4F6; /* Button color (blue) */
-  border: solid 1px #D1D5DB;
-  border-radius: 3px; /* Rounded corners for aesthetics */
+  background-color: white;
+  border: solid 1px #d6d6d6;
+  border-radius: 0px; /* Rounded corners for aesthetics */
   cursor: pointer;
   text-align: center;
   vertical-align: 0.1rem; /* Aligns with surrounding text */
@@ -229,9 +272,8 @@ a.contact:hover {
 }
 
 .inline-button:hover {
-  background-color: #D1D5DB;
-  border: solid 1px #D1D5DB;
-  color: #222
+  color: #222;
+  border: solid 1px #222;
 }
 
 .hidden-inline-button {
@@ -375,5 +417,21 @@ a.contact:hover {
   .contact-container {
   font-size: 0.9rem;
   margin-top: 2em;
+}
+
+p a {
+  padding-bottom: 0.5px; /* Reduced padding between text and line */
+}
+
+#bibliography p {
+  margin-bottom: 2rem;
+}
+
+.paper-title + br {
+    display: none; /* Hide <br> on mobile view */
+  }
+
+  .styled-list {
+  margin-top: -1.5rem;
 }
 }
