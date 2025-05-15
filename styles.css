@@ -50,6 +50,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #111; /* Darker color on hover */
+  cursor: pointer;
 }
 
 /* Style for the current page link */
@@ -70,15 +71,16 @@ h1 a.current-page {
 
 h1 a:hover {
   color: #111; /* Active color for the current page */
+  cursor: pointer;
 }
 
 main {
-  padding: 2rem 22vw;
+  padding: 2rem 20vw;
   min-width: 500px; /* Prevents wrapping below 600px width */
 }
 
 p {
-  padding: 0 2rem; /* Additional padding on the sides of the paragraphs */
+  padding: 0 0rem; /* Additional padding on the sides of the paragraphs */
   text-align: left; /* Makes the text look more organized */
   line-height: 1.8; /* Comfortable line height for paragraphs */
   font-family: objektiv-mk3, sans-serif;
@@ -114,25 +116,29 @@ p {
   color: #111 !important;
 }
 
+.course-title {
+  font-weight:500;
+  display: block;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+}
+
 .paper-title {
   font-weight:500;
 }
 
 .paper-title a {
   color: #2e68f2;
-  transition: all 0.3s ease;
-  text-decoration: underline solid 1.5px white;
+  transition: color 0.3s ease;
+  text-decoration: none;
   border-bottom: none;
 }
 
 .paper-title a:hover {
   color: #4A7FF5;
-      text-decoration: underline;
-      text-decoration-thickness: 1.5px; /* Increase thickness */
-      text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-color: white;
+      text-decoration: none;
       border-bottom: none;
+      cursor: pointer;
 }
 
 p a {
@@ -147,6 +153,7 @@ p a {
 p a:hover {
   color: #4A7FF5; /* Change to current color on hover */
   border-bottom: 1.5px solid white; /* Thin gray line underneath */
+  cursor: pointer;
 }
 
 img {
@@ -221,9 +228,9 @@ a.contact:hover {
 }
 
 .styled-list a:hover {
-  color: #999;
+  color: #222;
   text-decoration: none;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid #777;
 }
 
 /* Bibliography Section Styles */
@@ -415,7 +422,7 @@ a.contact:hover {
   }
 
   .contact-container {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-top: 2em;
 }
 
