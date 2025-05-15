@@ -355,6 +355,7 @@ a.contact:hover {
     float: none;
     display: block;
     margin: 1rem auto;
+    margin-bottom: 5vh;
   }
 
   #bibliography h2 {
@@ -371,7 +372,7 @@ a.contact:hover {
   }
 
   .contact-container {
-  font-size: 95%;
+  font-size: 0.9rem;
   margin-top: 2em;
 }
 }
