@@ -1,105 +1,359 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styles */
 body {
-    background-color: #f8f8f5; /* Off-white background */
-    font-family: Arial, sans-serif;
-    color: #111; /* Dark gray text */
-    line-height: 1.6;
-    margin: 0;
+  margin: 0;
+  background-color: white;
+  line-height: 1.6; /* Global line height for better readability */
 }
 
-/* Container Styles */
-.container {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vh 20vw 2rem; /* Comfortable padding above and below the header */
+  min-width: 500px; /* Prevents wrapping below 600px width */
+
+}
+
 header h1 {
-    font-size: 1.8em;
-    color: #000; /* Slightly darker for emphasis */
-    text-align: left; /* Left-aligned header */
-    margin-bottom: 10px;
+  margin: 0;
+  font-family: "objektiv-mk2", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
 }
 
-/* Menu Bar Styles */
-.menu-bar {
-    margin-bottom: 20px;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
 }
 
-.menu-bar ul {
-    list-style: none;
-    display: flex; /* Arrange items horizontally */
-    gap: 20px; /* Add spacing between menu items */
-    padding: 0;
-  font-family: "freight-text-pro", serif;
-font-weight: 500;
-font-style: normal;
-  font-feature-settings: "smcp"; 
-  text-transform: lowercase;
-  letter-spacing: 10%
+nav ul li {
+  margin: 0;
 }
 
-.menu-bar ul li {
-    display: inline-block;
-    position: relative; /* Required for ::before positioning */
+nav ul li a {
+  font-family: objektiv-mk3, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase; /* Set to all caps */
+  letter-spacing: 0.12em; /* 10% letter spacing */
+  text-decoration: none; /* Remove underline */
+  color: #777; /* Soft but clearly visible gray color */
+  font-size: 0.7rem; /* 85% of paragraph font size */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.menu-bar ul li a {
-    text-decoration: none;
-    color: #111; /* Same color as body text */
-    font-size: 14px;
+nav ul li a:hover {
+  color: #111; /* Darker color on hover */
 }
 
-.menu-bar ul li a::before {
-    content: "";
-    position: absolute;
-    bottom: 0; /* Position underline at the bottom of text */
-    left: 0;
-    width: 50%; /* Cover only the first 50% of the text */
-    height: 1px; /* Thickness of the underline */
-    background-color: #333; /* Same color as the text */
-    transform: scaleX(0); /* Initially hidden */
-    transform-origin: left; /* Animate from left to right */
-    transition: transform 0.3s ease; /* Smooth animation */
+/* Style for the current page link */
+nav ul li a.current-page {
+  color: #111; /* Active color for the current page */
+  font-weight: 500; /* Slightly bolder to signify the current page */
 }
 
-.menu-bar ul li a:hover::before {
-    transform: scaleX(1); /* Expand underline on hover */
+h1 a {
+  color: #111; /* Active color for the current page */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* First menu item ("About") underline visible by default */
-.menu-bar ul li:first-child a::before {
-    transform: scaleX(1); /* Underline visible by default */
+h1 a.current-page {
+  color: #111; /* Active color for the current page */
 }
 
-/* On hover, retract the underline for the first menu item */
-.menu-bar ul li:first-child a:hover::before {
-    transform: scaleX(0); /* Retract underline on hover */
-    transform-origin: left; /* Retract from right to left */
+h1 a:hover {
+  color: #111; /* Active color for the current page */
 }
 
-/* Main Content Styles */
 main {
-    text-align: left;
-}
-
-h1 {
-  font-family: "freight-text-pro", serif;
-font-weight: 600;
-font-style: normal;
+  padding: 2rem 22vw;
+  min-width: 500px; /* Prevents wrapping below 600px width */
 }
 
 p {
-  font-family: "freight-text-pro", serif;
-font-weight: 400;
-font-style: normal;
+  padding: 0 2rem; /* Additional padding on the sides of the paragraphs */
+  text-align: left; /* Makes the text look more organized */
+  line-height: 1.8; /* Comfortable line height for paragraphs */
+  font-family: objektiv-mk3, sans-serif;
+  font-size: 1rem; /* Paragraph font size */
+  font-weight: 400;
+  color: #222;
+}
+
+.tall-break {
+  display: block;
+  margin-top: 1.25em;
+  content: "";
+}
+
+.tall-break2 {
+  display: block;
+  margin-top: 1.5em;
+  content: "";
+}
+
+.contact-container {
+  font-size: 85%;
+  margin-top: 2em;
+}
+
+.contact-container a {
+  color: currentColor;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact-container a:hover {
+  border-bottom: 0px solid #222; /* Thin gray line underneath */
+  color: #111 !important;
+}
+
+.paper-title {
+  font-weight:500;
+}
+
+.paper-title a {
+  color: #1E40AF;
+    text-decoration: none; 
+    transition: color 0.2s ease; /* Smooth transition for hover effect */
+  border-bottom: none;
+}
+
+.paper-title a:hover {
+  text-decoration: none; 
+  border-bottom: none;
+  color: #2563EB;
+}
+
+p a {
+  text-decoration: none; /* Remove underline for paragraph links */
+  color: #222; /* Default link color */
+  border-bottom: 1px solid #d6d6d6; /* Thin gray line underneath */
+  padding-bottom: 2px; /* Stylish padding between text and line */
+  transition: border-bottom 0.3s ease; /* Smooth transition for hover effect */
+}
+
+p a:hover {
+  color: currentColor;
+  border-bottom: 1px solid #222; /* Thin gray line underneath */
+}
+
+img {
+  width: 160px;
+  height: 160px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  float: right;
+  background-color: aliceblue; /* Set background color to aliceblue */
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.2em;
+}
+
+a.contact {
+  color:#222;
+  font-weight:500;
+  border-bottom: none; /* Remove underline */
+  transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a.contact:hover {
+  color: #111; /* Fade to 80% opacity on hover */
+}
+
+/* Bibliography Section Styles */
+#bibliography p {
+  padding: 0 0rem; /* Additional padding on the sides of the paragraphs */
+  margin-bottom: 1.2rem;
+  font-size:0.9rem;
+}
+
+#bibliography h2 {
+  font-family: "objektiv-mk3", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500 !important;
+  margin-bottom: 2rem;
+  color: #222;
+  text-transform: uppercase; /* Set to all caps */
+  letter-spacing: 0.12em; /* 10% letter spacing */
+  /* Add vertical line */
+  position: relative; /* Required for line positioning */
+  padding-left: 0rem; /* Space between line and text */
+}
+
+#bibliography h2::before {
+  content: ""; /* Creates the vertical line */
+  position: absolute;
+  top: 0;
+  bottom: 0; /* Ensures the line spans the full height of the h2 */
+  left: -15px; /* Moves the line further left into the margin */
+  width: 1.5px; /* Line thickness */
+  background-color: #222; /* Line color */
+}
+
+.solid-line {
+  border: none;
+  border-top: 1px solid #777; /* You can change "black" to any color */
+  padding: 0 2rem; /* Additional padding on the sides of the paragraphs */
+  margin: 3rem 0;
+}
+
+.inline-button {
+  font-family: "objektiv-mk3", sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  padding: 2.5px 4.5px; /* Horizontal padding for text */
+  margin-left: 0rem;
+  height: 100%; /* Matches the line height */
+  line-height: 1; /* Ensure the button aligns with other text */
+  font-size: 0.6rem; /* Matches the surrounding font size */
+  color: #222;
+  background-color: #F3F4F6; /* Button color (blue) */
+  border: solid 1px #D1D5DB;
+  border-radius: 3px; /* Rounded corners for aesthetics */
+  cursor: pointer;
+  text-align: center;
+  vertical-align: 0.1rem; /* Aligns with surrounding text */
+  white-space: nowrap; /* Prevents wrapping */
+  transition: all 0.3s ease;
+  
+}
+
+.inline-button:hover {
+  background-color: #D1D5DB;
+  border: solid 1px #D1D5DB;
+  color: #222
+}
+
+.hidden-inline-button {
+  font-family: "objektiv-mk3", sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  padding: 2.5px 4.5px; /* Horizontal padding for text */
+  margin-left: 0rem;
+  height: 100%; /* Matches the line height */
+  line-height: 1; /* Ensure the button aligns with other text */
+  font-size: 0.6rem; /* Matches the surrounding font size */
+  color: #222;
+  background-color: #F3F4F6; /* Button color (blue) */
+  border: solid 1px #D1D5DB;
+  border-radius: 3px; /* Rounded corners for aesthetics */
+  cursor: pointer;
+  text-align: center;
+  vertical-align: 0.1rem; /* Aligns with surrounding text */
+  white-space: nowrap; /* Prevents wrapping */
+  transition: all 0.3s ease;
+}
+
+.hidden-inline-button:hover {
+  background-color: #D1D5DB;
+  border: solid 1px #D1D5DB;
+  color: #222
+}
+
+.hidden-text-container {
+  display: none; /* Initially hidden */
+  padding-top: 0rem; /* Padding at the top of the text */
+  border-left: 1px solid black; /* Vertical black line to the left */
+  padding-left: 0.75rem; /* Space between the line and the text */
+}
+
+.hidden-text {
+  font-size: 0.8rem;
+  font-family: "objektiv-mk3", sans-serif;
+  color: #222;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  header {
+    margin-top: 5vh;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10vw 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav {
+    margin-top: 2vh;
+  }
+
+  main {
+    padding: 2rem 10vw;
+  }
+
+  p {
+    padding: 0 1rem;
+  }
+
+  img {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+  }
+
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  header {
+    margin-top: 5vh;
+    padding: 20px 5vw 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem; /* Slightly larger font for better readability */
+  }
+
+  main {
+    padding: 1.5rem 5vw;
+  }
+
+  p {
+    padding: 0;
+    font-size: 0.9rem; /* Slightly smaller font for smaller screens */
+  }
+
+  img {
+    width: 100%; /* Make images responsive */
+    max-width: 300px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    float: none;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  #bibliography h2 {
+    font-size: 0.9rem; /* Adjust heading size */
+    padding-left: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  #bibliography h2::before {
+    left: -10px; /* Adjust vertical line position */
+  }
+
+  .hidden-inline-button {
+    font-size: 0.7rem; /* Slightly larger for better readability */
+  }
 }
