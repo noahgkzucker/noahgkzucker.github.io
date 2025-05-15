@@ -119,14 +119,14 @@ p {
 }
 
 .paper-title a {
-  color: #222;
+  color: #2e68f2;
   transition: all 0.3s ease;
   text-decoration: underline solid 1.5px white;
   border-bottom: none;
 }
 
 .paper-title a:hover {
-  color: #969696;
+  color: #4A7FF5;
       text-decoration: underline;
       text-decoration-thickness: 1.5px; /* Increase thickness */
       text-decoration-line: underline;
@@ -137,16 +137,16 @@ p {
 
 p a {
   text-decoration: none; /* Remove underline for paragraph links */
-  color: #222; /* Default link color */
-  border-bottom: 1.5px solid #d6d6d6;
+  color: #2e68f2; /* Default link color */
+  border-bottom: 1.5px solid white;
   padding-bottom: 0px;
   line-height: 1;
-  transition: border-bottom 0.3s ease; /* Smooth transition for hover effect */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 p a:hover {
-  color: #222; /* Change to current color on hover */
-  border-bottom: 1.5px solid #222; /* Thin gray line underneath */
+  color: #4A7FF5; /* Change to current color on hover */
+  border-bottom: 1.5px solid white; /* Thin gray line underneath */
 }
 
 img {
@@ -178,11 +178,11 @@ img {
 a.contact {
   color:#222;
   font-weight:500;
-  border-bottom: none; /* Remove underline */
+  border-bottom: none;
 }
 
 a.contact:hover {
-  color: #222; /* Fade to 80% opacity on hover */
+  color: #222;
 }
 
 .styled-list {
@@ -272,8 +272,8 @@ a.contact:hover {
 }
 
 .inline-button:hover {
-  color: #222;
-  border: solid 1px #222;
+  color: #777;
+  border: solid 1px #d6d6d6;
 }
 
 .hidden-inline-button {
