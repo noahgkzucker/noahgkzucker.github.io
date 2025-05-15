@@ -275,6 +275,10 @@ a.contact:hover {
 
 /* Responsive design for tablets */
 @media (max-width: 768px) {
+  header, main {
+    min-width: unset; /* Remove fixed minimum width */
+  }
+  
   header {
     margin-top: 5vh;
     flex-direction: column;
@@ -305,10 +309,19 @@ a.contact:hover {
     margin: 1rem auto;
   }
 
+  .contact-container {
+  font-size: 95%;
+  margin-top: 2em;
+}
+
 }
 
 /* Responsive design for mobile */
 @media (max-width: 480px) {
+  header, main {
+    min-width: unset; /* Remove fixed minimum width */
+  }
+
   header {
     margin-top: 5vh;
     padding: 20px 5vw 2rem;
@@ -356,4 +369,9 @@ a.contact:hover {
   .hidden-inline-button {
     font-size: 0.7rem; /* Slightly larger for better readability */
   }
+
+  .contact-container {
+  font-size: 95%;
+  margin-top: 2em;
+}
 }
