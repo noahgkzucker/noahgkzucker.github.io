@@ -171,6 +171,12 @@ img {
   vertical-align: -0.2em;
 }
 
+.icon-menu {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+}
+
 .icon-data {
   width: 1.3em;
   height: 1.3em;
