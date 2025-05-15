@@ -307,6 +307,7 @@ a.contact:hover {
     float: none;
     display: block;
     margin: 1rem auto;
+    margin-bottom: 5vh;
   }
 
   .contact-container {
