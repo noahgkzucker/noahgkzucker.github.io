@@ -217,13 +217,13 @@ a.contact:hover {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 0px;
   line-height: 1;
-  transition: border-bottom 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .styled-list a:hover {
-  color: currentColor;
+  color: #999;
   text-decoration: none;
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 /* Bibliography Section Styles */
@@ -272,8 +272,8 @@ a.contact:hover {
 }
 
 .inline-button:hover {
-  color: #777;
-  border: solid 1px #d6d6d6;
+  color: #222;
+  border: solid 1px #222;
 }
 
 .hidden-inline-button {
