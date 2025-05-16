@@ -62,7 +62,7 @@
 <path d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z"/></svg>                &nbsp; 
                 &#110;&#111;&#097;&#104;&#122;&#117;&#099;&#107;&#101;&#114;&#064;&#112;&#114;&#105;&#110;&#099;&#101;&#116;&#111;&#110;&#046;&#101;&#100;&#117;
             </a>
-            <span id="copy-alert" style="display:none; margin-left: 0.5rem; font-weight: 500; color: #F58025;">
+            <span id="copy-alert" style="display:none; margin-left: 0.5rem; font-size: 90%; font-weight: 500; color: #F58025;">
                 Copied.
             </span>
         </p>
@@ -78,7 +78,7 @@
       alert.style.display = "inline";
       setTimeout(() => {
         alert.style.display = "none";
-      }, 3000); // hide after 2 seconds
+      }, 2500); // hide after 2.5 seconds
     }).catch(err => {
       console.error("Failed to copy email:", err);
     });
