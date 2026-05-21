@@ -127,6 +127,31 @@ p {
   font-weight:500;
 }
 
+.semibold {
+  font-weight: 500;
+}
+
+.book-title {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.warning {
+  color: red;
+}
+
+.page-spacer {
+  height: 50px;
+}
+
+#copy-alert {
+  display: none;
+  margin-left: 0.5rem;
+  font-size: 90%;
+  font-weight: 500;
+  color: #F58025;
+}
+
 .paper-title a {
   color: #2e68f2;
   transition: color 0.3s ease;
@@ -240,13 +265,13 @@ a.contact:hover {
 }
 
 /* Bibliography Section Styles */
-#bibliography p {
+.bibliography p {
   padding: 0 0rem; /* Additional padding on the sides of the paragraphs */
   margin-bottom: 1.2rem;
   font-size:0.9rem;
 }
 
-#bibliography h2 {
+.bibliography h2 {
   font-family: "objektiv-mk3", sans-serif;
   font-size: 1.05rem;
   font-weight: 600 !important;
@@ -414,12 +439,12 @@ a.contact:hover {
     margin-bottom: 5vh;
   }
 
-  #bibliography h2 {
+  .bibliography h2 {
     font-size: 0.9rem; /* Adjust heading size */
     padding-left: 1rem; /* Reduce padding for smaller screens */
   }
 
-  #bibliography h2::before {
+  .bibliography h2::before {
     left: -10px; /* Adjust vertical line position */
   }
 
@@ -436,7 +461,7 @@ p a {
   padding-bottom: 0.5px; /* Reduced padding between text and line */
 }
 
-#bibliography p {
+.bibliography p {
   margin-bottom: 2rem;
 }
 
@@ -447,4 +472,5 @@ p a {
   .styled-list {
   margin-top: -1.5rem;
 }
+
 }

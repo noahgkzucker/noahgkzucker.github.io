@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.noahzucker.com/</loc>
-    <lastmod>2025-04-30</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.noahzucker.com/research.html</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.noahzucker.com/research</loc>
+    <lastmod>2026-04-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.noahzucker.com/courses.html</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.noahzucker.com/courses</loc>
+    <lastmod>2026-04-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.noahzucker.com/zucker_cv.pdf</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.noahzucker.com/docs/zucker_cv.pdf</loc>
+    <lastmod>2026-02-10</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
