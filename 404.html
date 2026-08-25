@@ -1,76 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            line-height: 1.6;
-        }
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-        h1 {
-            font-size: 6rem;
-            margin: 0;
-            color: #ff5555;
-        }
+  <title>Page Not Found</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
 
-        p {
-            font-size: 1.25rem;
-        }
-
-        a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #007BFF;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #0056b3;
-        }
-
-        .error-container {
-            max-width: 600px;
-            padding: 20px;
-        }
-
-        .back-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <link rel="stylesheet" href="https://use.typekit.net/bpz6lzu.css?v=20260722">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
+    integrity="sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    if (/^\/(?:research|courses)(?:\.html|\/)?$/.test(window.location.pathname)) {
+      window.location.replace("/");
+    }
+  </script>
 </head>
 
-<body>
-    <div class="error-container">
-        <h1>404</h1>
-        <p>Oops! The page you're looking for doesn't exist.</p>
-        <p>It might have been moved, renamed, or deleted.</p>
-        <a href="https://www.noahzucker.com/">Go back to the homepage</a>
-    </div>
-</body>
+<body class="error-page">
+  <main class="error-layout">
+    <p class="error-code" aria-hidden="true">404</p>
 
+    <div class="error-content">
+      <h1>Page not found</h1>
+      <p>The page you requested does not exist.</p>
+
+      <a class="home-link" href="/">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        <span>Back to noahzucker.com</span>
+      </a>
+    </div>
+  </main>
+</body>
 </html>
