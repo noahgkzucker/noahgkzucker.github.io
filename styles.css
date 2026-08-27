@@ -1209,7 +1209,7 @@ html.is-auto-scrolling .sidebar-external-link .sidebar-external-arrow {
   min-height: 1.5rem;
   align-items: center;
   justify-content: flex-start;
-  color: var(--muted);
+  color: color-mix(in srgb, var(--text) 60%, var(--background));
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.2;
@@ -1218,23 +1218,9 @@ html.is-auto-scrolling .sidebar-external-link .sidebar-external-arrow {
 }
 
 .social-link-label {
-  width: 0;
-  min-width: 0;
-  overflow: hidden;
-  opacity: 0;
+  margin-left: 0.35rem;
   text-align: left;
-  text-indent: 0.35rem;
-  transition:
-    width 800ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 240ms ease;
   white-space: nowrap;
-}
-
-.social-link-row:hover .social-link-label,
-.social-link-row:focus-within .social-link-label {
-  width: calc(var(--social-label-width) + 0.35rem);
-  opacity: 1;
-  transition-delay: 0ms, 120ms;
 }
 
 .social-link:hover,
@@ -1247,26 +1233,14 @@ html.is-auto-scrolling .sidebar-external-link .sidebar-external-arrow {
   color: #4285F4;
 }
 
-.google-scholar-link {
-  --social-label-width: 5.5rem;
-}
-
 .bluesky-link:hover,
 .bluesky-link:focus-visible {
   color: #006AFF;
 }
 
-.bluesky-link {
-  --social-label-width: 3rem;
-}
-
 .linkedin-link:hover,
 .linkedin-link:focus-visible {
   color: #0A66C2;
-}
-
-.linkedin-link {
-  --social-label-width: 3.25rem;
 }
 
 .social-link > i {
@@ -1329,7 +1303,6 @@ button:focus-visible {
   .course-term::before,
   .course-term .fa-asterisk::before,
   .course-term-label,
-  .social-link-label,
   .home-link i {
     transition: none;
   }
