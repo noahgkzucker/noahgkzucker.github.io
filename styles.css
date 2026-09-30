@@ -510,21 +510,26 @@ html.is-auto-scrolling a[href] {
 
 .intro-section-links a:nth-child(1) {
   --intro-link-open-delay: 0ms;
-  --intro-link-close-delay: 210ms;
+  --intro-link-close-delay: 280ms;
 }
 
 .intro-section-links a:nth-child(2) {
   --intro-link-open-delay: 70ms;
-  --intro-link-close-delay: 140ms;
+  --intro-link-close-delay: 210ms;
 }
 
 .intro-section-links a:nth-child(3) {
   --intro-link-open-delay: 140ms;
-  --intro-link-close-delay: 70ms;
+  --intro-link-close-delay: 140ms;
 }
 
 .intro-section-links a:nth-child(4) {
   --intro-link-open-delay: 210ms;
+  --intro-link-close-delay: 70ms;
+}
+
+.intro-section-links a:nth-child(5) {
+  --intro-link-open-delay: 280ms;
   --intro-link-close-delay: 0ms;
 }
 
