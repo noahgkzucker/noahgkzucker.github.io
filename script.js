@@ -1,5 +1,66 @@
 document.documentElement.classList.add("js");
 
+async function trackLinkClick(event) {
+  if (
+    !(event.target instanceof Element) ||
+    event.button !== (event.type === "auxclick" ? 1 : 0) ||
+    typeof window.umami?.track !== "function"
+  ) {
+    return;
+  }
+
+  const link = event.target.closest("a[href]");
+
+  if (!link || link.hasAttribute("data-umami-event")) {
+    return;
+  }
+
+  try {
+    const destination = new URL(link.href, window.location.href);
+
+    if (!["http:", "https:", "mailto:", "tel:"].includes(destination.protocol)) {
+      return;
+    }
+
+    // Keep document revisions together and omit read-only access tokens.
+    if (
+      destination.origin === window.location.origin &&
+      /\.pdf$/i.test(destination.pathname)
+    ) {
+      destination.searchParams.delete("v");
+    }
+    destination.searchParams.delete("view_only");
+
+    const label = link.cloneNode(true);
+    label
+      .querySelectorAll('.visually-hidden, [aria-hidden="true"]')
+      .forEach((element) => element.remove());
+
+    const normalizeText = (text) => text.replace(/\s+/g, " ").trim().slice(0, 500);
+    const data = {
+      url: destination.href.slice(0, 500),
+      label:
+        normalizeText(link.getAttribute("aria-label") || label.textContent) ||
+        destination.href.slice(0, 500),
+    };
+    const paperTitle = link
+      .closest(".publication")
+      ?.querySelector(".publication-title-text, [data-publication-title]")
+      ?.textContent;
+
+    if (paperTitle) {
+      data.paper = normalizeText(paperTitle);
+    }
+
+    await window.umami.track("link-click", data);
+  } catch {
+    // Analytics failures must not affect the page or link navigation.
+  }
+}
+
+document.addEventListener("click", trackLinkClick, { passive: true });
+document.addEventListener("auxclick", trackLinkClick, { passive: true });
+
 const emailButton = document.querySelector("[data-copy-email]");
 const emailTooltip = document.getElementById("email-tooltip");
 const emailCopyStatus = document.getElementById("email-copy-status");
